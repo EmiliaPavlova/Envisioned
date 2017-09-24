@@ -1,0 +1,29 @@
+{
+  "name": "envisioned",
+  "version": "1.0.0",
+  "description": "Web Front-end Application",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Emilia Pavlova",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
+    "express-messages": "^1.0.1",
+    "mongodb": "^2.2.31",
+    "pug": "^2.0.0-rc.4",
+    "pug-bootstrap": "^0.0.15"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.7.2",
+    "eslint-config-google": "^0.9.1",
+    "gulp": "^3.9.1"
+  }
+}
