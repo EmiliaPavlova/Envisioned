@@ -4,7 +4,7 @@ const app = express();
 require('./config').configApp(app);
 
 const init = (data) => {
-    // require('./routers/routers')(app, data);
+    require('./routers/routers')(app, data);
 
     app.use((req, res, next) => {
         res.locals.messages = require('express-messages')(req, res);
