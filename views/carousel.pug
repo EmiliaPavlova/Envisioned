@@ -1,0 +1,38 @@
+.carousel.slide(id="myCarousel" data-ride="carousel")
+    <!-- Wrapper for slides -->
+    .carousel-inner(role="listbox")
+        .item.active
+            img(src="../../public/assets/images/book.jpg" alt="pic 1")
+            .carousel-caption.d-none.d-md-block
+                h3 Title
+        .item
+            img(src="../../public/assets/images/book.jpg" alt="pic 2")
+            .carousel-caption.d-none.d-md-block
+                h3 Title
+        .item
+            img(src="../../public/assets/images/book.jpg" alt="pic 3")
+            .carousel-caption.d-none.d-md-block
+                h3 Title
+        .item
+            img(src="../../public/assets/images/book.jpg" alt="pic 4")
+            .carousel-caption.d-none.d-md-block
+                h3 Title
+
+    <!-- Left and right controls -->
+    a.left.carousel-control(href="#myCarousel" role="button" data-slide="prev")
+        span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+        span.sr-only Previous
+    a.right.carousel-control(href="#myCarousel" role="button" data-slide="next")
+        span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+        span.sr-only Next
+
+    <!-- Indicators -->
+.carousel-indicators
+    .background-image
+        img(data-target="#myCarousel" data-slide-to="0" src="../../public/assets/images/book.jpg" alt="pic 1")
+    .background-image
+        img(data-target="#myCarousel" data-slide-to="1" src="../../public/assets/images/book.jpg" alt="pic 2")
+    .background-image
+        img(data-target="#myCarousel" data-slide-to="2" src="../../public/assets/images/book.jpg" alt="pic 3")
+    .background-image
+        img(data-target="#myCarousel" data-slide-to="3" src="../../public/assets/images/book.jpg" alt="pic 4")
