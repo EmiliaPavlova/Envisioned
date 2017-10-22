@@ -1,39 +1,40 @@
-- var menuItems = { 'Books': '/books', 'Authors': '/authors', 'Genres': '/genres', 'Users': '/users', 'Contacts': '/contacts' }
-- var homeItems = { 'Home 1': '/', 'Home 2': '/', 'Home 3': '/' }
+- var menuItems = { 'Themes': '/themes', 'Features': '/', 'About': '/', 'Blog': '/', 'Support': '/', 'Affiliates': '/', 'Login': '/', 'Join Today': '/', 'Get a Quote': '/' }
+- var homeItems = { 'Themes': '/themes', 'Features': '/', 'About': '/', 'Blog': '/' }
 
 mixin dropdown-item(name, link)
   li
     a.dropdown-item(href=link)= name
 
 mixin nav-item(name, link)
-  li.nav-item.menu
-    a.nav-link(href=link)= name
+    li.nav-item.menu
+      a.nav-link(href=link)= name
 
 .brand
-  a.brand-link(href='/') Rent A Book
+  a.brand-link(href='/') envisioned
 
-  nav.navbar.navbar-dark.bg-dark.navbar-expand-lg
-    button.navbar-toggler.collapsed(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-      span.navbar-toggler.icon.sr-only Toggle navigation
-      span.navbar-toggler-icon
-      span.navbar-toggler-icon
-      span.navbar-toggler-icon
-    .collapse.navbar-collapse(id='navbarSupportedContent')
-      .navbar-brand.header-grey
-        ul.nav.navbar-nav.mr-auto
-          li.nav-item.dropdown.menu
-            a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button') Home
+  nav.navbar
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+      .collapse.navbar-collapse.header-grey(id="bs-example-navbar-collapse-2")
+        ul.nav.navbar-nav
+          li.dropdown.nav-item.menu
+            a.nav-link.active(href="/" data-toggle='dropdown' role='button') Home
               ul.dropdown-menu.submenu
                 each val, key in homeItems
                   +dropdown-item(key, val)
 
-            each val, key in menuItems
-              +nav-item(key, val)
+          each val, key in menuItems
+            +nav-item(key, val)
 
-        ul.nav.navbar-nav.pull-right
+        ul.nav.navbar-nav.navbar-right
           li
             a
               img.nav-image(src='../../public/assets/icons/twitter.png', alt='twitter')
               img.nav-image(src='../../public/assets/icons/facebook.png', alt='facebook')
               img.nav-image(src='../../public/assets/icons/rss.png', alt='rss')
-

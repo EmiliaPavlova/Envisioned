@@ -5,19 +5,24 @@ html
     meta(name='viewport', content='width=device-width, height=device-height, initial-scale=1.0')
     script(src='../../node_modules/jquery/dist/jquery.js')
     script(src='../../node_modules/bootstrap/dist/js/bootstrap.js')
-    //- script(src='../../public/js/ajax.js')
+    //- script(src="//frontend.reklamor.com/fancybox/jquery.fancybox.js")
+    //- <link rel="stylesheet" href="//frontend.reklamor.com/fancybox/jquery.fancybox.css" media="screen">
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js")
+    script(src='../../public/js/scripts.js')
     //- script(src='../../public/js/layout.js')
     //- script(src='../../node_modules/socket.io-client/dist/socket.io.js')
     //- script(src='../../node_modules/toastr/build/toastr.min.js')
     //- script(src='../../public/js/toastr.js')
     //- script(src='../../public/js/socketio.js')
     block stylesheet
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css")
     link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='/public/css/style.css')
 body
   .wrapper
-    .header
-      include nav
+    block header
+    //- .header
+    //-   include nav
     .main
       block content
     include footer

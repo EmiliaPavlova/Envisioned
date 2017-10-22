@@ -1,0 +1,88 @@
+extends ../_common/layout
+
+block header
+  .header
+    include ../_common/nav
+  if model.title
+    h3.index-title #{model.title}
+  else
+    h3.index-title Post Title
+
+block content
+  .content.index-page
+    p.breadcrumbs Home » Blog » &nbsp;
+      span Class aptent taciti sociosqu ad
+
+    .index-container
+      .index-article
+        img.line(src='../../public/assets/icons/line.png')
+        p.subtitle Posted by #{model.author} on #{model.datePosted} in #{model.category} | #{model.comments} Comments
+        .article-content
+          .center-cropped
+            if model.photo
+              img.article-image(src=`../../public/assets/images/${model.photo}`)
+              .shadow
+            else
+              .empty-image
+          .article-text
+            p #{model.text}
+
+        h3.comments #{model.comments} Comments
+        img.line(src='../../public/assets/icons/line.png')
+
+        .comment
+          .author
+            img(src='../../public/assets/images/photo.jps')
+            .shadow-photo
+            p 12-13-2011
+
+          .triangle
+          .post-border
+            .post
+              h4 Emily says:
+              p Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magna est bibendum arcu, sit amet tempor lacus mi nec felis. Vestibulum erat ante, laoreet et dignissim ac, blandit dictum elit. Cras auctor iaculis mi at blandit. Fusce id velit metus. Duis turpis ante, consequat a hendrerit nec, biben
+            .article-button
+              a.article-button Read Mode
+        .inner
+          .comment
+            .author
+              img(src='../../public/assets/images/photo.jps')
+              .shadow-photo
+              p 12-13-2011
+
+            .triangle
+            .post-border
+              .post
+                h4 Emily says:
+                p Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magna est bibendum arcu, sit amet tempor lacus mi nec felis. Vestibulum erat ante, laoreet et dignissim ac, blandit dictum elit. Cras auctor iaculis mi at blandit. Fusce id velit metus. Duis turpis ante, consequat a hendrerit nec, biben
+              .article-button
+                a.article-button Read Mode
+
+        h3.comments Live a Comment
+        img.line(src='../../public/assets/icons/line.png')
+
+      .index-posts
+        h4 Recent Posts
+        .post-border
+          .post
+            p Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magna est bibendum arcu, sit amet tempor lacus mi nec felis. Vestibulum erat ante, laoreet et dignissim ac, blandit dictum elit. Cras auctor iaculis mi at blandit. Fusce id velit metus. Duis turpis ante, consequat a hendrerit nec, biben
+        h4 Recent Posts
+        .post-border
+          ul
+            li Sed neque ipsum pulvinar eu trist
+            li Cras eu eros id dui porttitor luctus
+            li Vivamus vitae nibh id quam conv
+            li Aenean vulputate fermentum ante rhoncus pulvinar
+            li Ut sagittis ultrices urna eget erat purusSed neque ipsum pulvinar eu 
+            li Cras eu eros id dui porttitor luctus
+            li Vivamus vitae nibh id quam convallis 
+        h4 Recent Comments
+        .post-border
+          ul
+            li Sed neque ipsum pulvinar eu trist
+            li Cras eu eros id dui porttitor luctus
+            li Vivamus vitae nibh id quam conv
+            li Aenean vulputate fermentum ante rhoncus pulvinar
+            li Ut sagittis ultrices urna eget erat purusSed neque ipsum pulvinar eu 
+            li Cras eu eros id dui porttitor luctus
+            li Vivamus vitae nibh id quam convallis 

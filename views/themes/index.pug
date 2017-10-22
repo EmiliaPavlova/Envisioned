@@ -1,0 +1,69 @@
+extends ../_common/layout
+
+block header
+  .header
+    include ../_common/nav
+  h3.index-title Portfolio Category
+
+block content
+  .content.index-page
+    p.breadcrumbs Home » Blog » &nbsp;
+      span Class aptent taciti sociosqu ad
+
+    .index-container
+      .index-article
+        each article in model
+          h3 #{article.title}
+          img.line(src='../../public/assets/icons/line.png')
+          p.subtitle Posted by #{article.author} on #{article.datePosted} in #{article.category} | #{article.comments} Comments
+          .article-content
+            .center-cropped
+              if article.photo
+                img.article-image(src=`../../public/assets/images/${article.photo}`)
+                .shadow
+              else
+                .empty-image
+            .article-text.overflow
+              p #{article.text}
+          .article-button
+            a.article-button(href=`themes/${article._id}`) Read Mode
+
+      .index-posts
+        h4 Recent Posts
+        .post-border
+          .post
+            p Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magna est bibendum arcu, sit amet tempor lacus mi nec felis. Vestibulum erat ante, laoreet et dignissim ac, blandit dictum elit. Cras auctor iaculis mi at blandit. Fusce id velit metus. Duis turpis ante, consequat a hendrerit nec, biben
+        h4 Recent Posts
+        .post-border
+          ul
+            li Sed neque ipsum pulvinar eu trist
+            li Cras eu eros id dui porttitor luctus
+            li Vivamus vitae nibh id quam conv
+            li Aenean vulputate fermentum ante rhoncus pulvinar
+            li Ut sagittis ultrices urna eget erat purusSed neque ipsum pulvinar eu 
+            li Cras eu eros id dui porttitor luctus
+            li Vivamus vitae nibh id quam convallis 
+
+    .pagination
+      img(src='../../public/assets/icons/line.png')
+      .pages
+        if page
+          p Page #{page} of 4
+        else
+          p Page 1 of 4
+        nav(aria-label='Page navigation example')
+          ul.pagination
+            if !page == 1 || val == 1
+              li.page-item
+                a.page-link.active(href=`/themes`)= 1
+            else
+              li.page-item
+                a.page-link(href=`/themes`)= 1
+            each val in [2, 3, 4]
+              if page == val
+                li.page-item
+                  a.page-link.active(href=`/themes?page=${val}`)= val
+              else
+                li.page-item
+                  a.page-link(href=`/themes?page=${val}`)= val
+

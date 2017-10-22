@@ -3,81 +3,76 @@ extends _common/layout
 block stylesheet
   link(rel='stylesheet', href='../public/css/style.css')
 
+block header
+  .header
+    include _common/nav
+
 block content
-  .carousel.slide(id="myCarousel" data-ride="carousel")
-    <!-- Wrapper for slides -->
-    .carousel-inner(role="listbox")
-        each book,index in model
-          if index === 0
-             .item.active
-                img(src=`../public/assets/images/${book.imageUrl}` alt=`${book.title}`)
-                .carousel-caption.d-none.d-md-block
-                    h3 #{book.title}
-          else
-            .item
-                img(src=`../public/assets/images/${book.imageUrl}` alt=`${book.title}`)
-                .carousel-caption.d-none.d-md-block
-                    h3 #{book.title}
-
-    <!-- Left and right controls -->
-    a.left.carousel-control(href="#myCarousel" role="button" data-slide="prev")
-        span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
-        span.sr-only Previous
-    a.right.carousel-control(href="#myCarousel" role="button" data-slide="next")
-        span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
-        span.sr-only Next
-
-    <!-- Indicators -->
-    .carousel-indicators
-      each book,index in model
-        .background-image
-          img(data-target="#myCarousel" data-slide-to=index src=`../public/assets/images/${book.imageUrl}` alt=`${book.title}`)
+  include carousel
 
   .content
     .article
       .header-article
-        img(src="../public/assets/icons/offer.png", alt="What We Offer")
-        h4 What We Offer
+        img(src='../public/assets/icons/offer.png', alt='What We Offer')
+        p What We Offer
       p.text Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magna est bibendum arcu, sit amet tempor lacus mi nec felis. Vestibulum erat ante, laoreet et dignissim ac, blandit dictum elit. Cras auctor iaculis mi at blandit. Fusce id velit metus. Duis turpis ante, consequat a hendrerit nec, biben
       .bottom-article
-        a.link(href="#") Read More
+        a.link(href='#') Read More
     .article
       .header-article
-        img(src="../public/assets/icons/identity.png", alt="Who We Are")
-        h4 Who We Are
+        img(src='../public/assets/icons/identity.png', alt='Who We Are')
+        p Who We Are
       p.text Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magna est bibendum arcu, sit amet tempor lacus mi nec felis. Vestibulum erat ante, laoreet et dignissim ac, blandit dictum elit. Cras auctor iaculis mi at blandit. Fusce id velit metus. Duis turpis ante, consequat a hendrerit nec, biben
       .bottom-article
-        a.link(href="#") Read More
+        a.link(href='#') Read More
     .article
       .header-article
-        img(src="../public/assets/icons/mission.png", alt="Our Mission")
-        h4 Our Mission
+        img(src='../public/assets/icons/mission.png', alt='Our Mission')
+        p Our Mission
       p.text Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magna est bibendum arcu, sit amet tempor lacus mi nec felis. Vestibulum erat ante, laoreet et dignissim ac, blandit dictum elit. Cras auctor iaculis mi at blandit. Fusce id velit metus. Duis turpis ante, consequat a hendrerit nec, biben
       .bottom-article
-        a.link(href="#") Read More
+        a.link(href='#') Read More
   .quote-wrapper
-    img(src="../public/assets/images/quote.png", alt="Quote")
-    p.quote Vivamus id feugiat ligula. Nulla facilisi. Integer lacus justo, elementum eget consequat a, molestie nec sapien. Quisque tincidunt, nunc vitae adipiscing
+    img(src='../public/assets/images/quote.png', alt='Quote')
+    p.quote Vivamus id feugiat ligula. Nulla facilisi. Integer lacus justo, elementum eget consequat a, molestie nec sapien. Quisque tincidunt, nunc vitae adipiscing vulputate
     .quote-button
       p.button Additional Info
+
   .gallery
-    .gallery-img
-      img(src="../public/assets/images/book.jpg", alt="")
-    .gallery-img
-      img(src="../public/assets/images/book.jpg", alt="")
-    .gallery-img
-      img(src="../public/assets/images/book.jpg", alt="")
-    .gallery-img
-      img(src="../public/assets/images/book.jpg", alt="")
-    .gallery-img
-      img(src="../public/assets/images/book.jpg", alt="")
-    .gallery-img
-      img(src="../public/assets/images/book.jpg", alt="")
-    .gallery-img
-      img(src="../public/assets/images/book.jpg", alt="")
-    .gallery-img
-      img(src="../public/assets/images/book.jpg", alt="")
-    .gallery-img
-      img(src="../public/assets/images/book.jpg", alt="")
-    .gallery-img
-      img(src="../public/assets/images/book.jpg", alt="")
+    .row
+      .list-group.gallery
+        .col-sm-1.col-xs-1.col-md-1.col-lg-1
+        .col-sm-2.col-xs-2.col-md-2.col-lg-2
+          a.fancybox.thumbnail(data-fancybox='gallery' rel='ligthbox' href='../public/assets/images/greypassion.jpg')
+            img.img-responsive(src='../public/assets/images/greypassion.jpg')
+          a.fancybox-close(style='display: inline;')
+        .col-sm-2.col-xs-2.col-md-2.col-lg-2
+          a.fancybox.thumbnail(data-fancybox='gallery' rel='ligthbox' href='../public/assets/images/jerry.jpg')
+            img.img-responsive(src='../public/assets/images/jerry.jpg')
+        .col-sm-2.col-xs-2.col-md-2.col-lg-2
+          a.fancybox.thumbnail(data-fancybox='gallery' rel='ligthbox' href='../public/assets/images/sparky.jpg')
+            img.img-responsive(src='../public/assets/images/sparky.jpg')
+        .col-sm-2.col-xs-2.col-md-2.col-lg-2
+          a.fancybox.thumbnail(data-fancybox='gallery' rel='ligthbox' href='../public/assets/images/roxanna.jpg')
+            img.img-responsive(src='../public/assets/images/roxanna.jpg')
+        .col-sm-2.col-xs-2.col-md-2.col-lg-2
+          a.fancybox.thumbnail(data-fancybox='gallery' rel='ligthbox' href='../public/assets/images/ryan3.jpg')
+            img.img-responsive(src='../public/assets/images/ryan3.jpg')
+        .col-sm-1.col-xs-1.col-md-1.col-lg-1
+        .col-sm-1.col-xs-1.col-md-1.col-lg-1
+        .col-sm-2.col-xs-2.col-md-2.col-lg-2
+          a.fancybox.thumbnail(data-fancybox='gallery' rel='ligthbox' href='../public/assets/images/ryan.jpg')
+            img.img-responsive(src='../public/assets/images/ryan.jpg')
+        .col-sm-2.col-xs-2.col-md-2.col-lg-2
+          a.fancybox.thumbnail(data-fancybox='gallery' rel='ligthbox' href='../public/assets/images/sparky2.jpg')
+            img.img-responsive(src='../public/assets/images/sparky2.jpg')
+        .col-sm-2.col-xs-2.col-md-2.col-lg-2
+          a.fancybox.thumbnail(data-fancybox='gallery' rel='ligthbox' href='../public/assets/images/roxanna2.jpg')
+            img.img-responsive(src='../public/assets/images/roxanna2.jpg')
+        .col-sm-2.col-xs-2.col-md-2.col-lg-2
+          a.fancybox.thumbnail(data-fancybox='gallery' rel='ligthbox' href='../public/assets/images/sam.jpg')
+            img.img-responsive(src='../public/assets/images/sam.jpg')
+        .col-sm-2.col-xs-2.col-md-2.col-lg-2
+          a.fancybox.thumbnail(data-fancybox='gallery' rel='ligthbox' href='../public/assets/images/together.jpg')
+            img.img-responsive(src='../public/assets/images/together.jpg')
+        .col-sm-1.col-xs-1.col-md-1.col-lg-1

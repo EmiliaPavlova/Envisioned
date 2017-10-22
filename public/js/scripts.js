@@ -1,10 +1,4 @@
-import $ from 'jquery';
-
-const wait = (seconds) => {
-    return new Promise((resolve) => {
-        setTimeout(resolve, seconds * 1000);
-    });
-};
+/* globals $ */
 
 $(document).ready(function() {
     $('.nav-link').each(function() {
@@ -14,3 +8,39 @@ $(document).ready(function() {
         }
     });
 });
+
+$(document).ready(function() {
+    /* This is basic - uses default settings */
+    $('a#single_image').fancybox();
+
+    /* Using custom settings */
+    $('a#inline').fancybox({
+        'hideOnContentClick': true,
+    });
+
+    /* Apply fancybox to multiple items */
+    $('a.group').fancybox({
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'speedIn': 600,
+        'speedOut': 200,
+        'overlayShow': false,
+    });
+});
+
+// $(document).ready(function() {
+//     $('.fdi-Carousel .item').each(function() {
+//         let next = $(this).next();
+//         if (!next.length) {
+//             next = $(this).siblings(':first');
+//         }
+//         next.children(':first-child').clone().appendTo($(this));
+
+//         if (next.next().length > 0) {
+//             next.next().children(':first-child').clone().appendTo($(this));
+//         }
+//         else {
+//             $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+//         }
+//     });
+// });

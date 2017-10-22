@@ -1,37 +1,95 @@
 {
-    "books": [{
-        "title": "A Game of Thrones",
-        "author": "George R. R. Martin",
-        "genre": "fantasy",
-        "dateAdded": "10.05.2015",
-        "imageUrl": "AGameOfThrones.jpg"
+    "photos": [{
+        "title": "Havi",
+        "author": "Alicja Zmysłowska",
+        "dateAdded": "2015/05/10",
+        "imageUrl": "havi.jpg"
     },
     {
-        "title": "A Clash of Kings",
-        "author": "George R. R. Martin",
-        "genre": "fantasy",
-        "dateAdded": "20.01.2016",
-        "imageUrl": "AClashOfKings.jpg"
+        "title": "Jerry",
+        "author": "Alicja Zmysłowska",
+        "dateAdded": "2016/01/20",
+        "imageUrl": "jerry.jpg"
     },
     {
-        "title": "A Storm of Swords",
-        "author": "George R. R. Martin",
-        "genre": "fantasy",
-        "dateAdded": "03.05.2016",
-        "imageUrl": "AStormOfSworfs1.jpg"
+        "title": "Kiara",
+        "author": "Alicja Zmysłowska",
+        "dateAdded": "2016/05/03",
+        "imageUrl": "kiara.jpg"
     },
     {
-        "title": "A Feast for Crows",
-        "author": "George R. R. Martin",
-        "genre": "fantasy",
-        "dateAdded": "29.11.2016",
-        "imageUrl": "AFeastForCrows.jpg"
+        "title": "Roxanna",
+        "author": "Alicja Zmysłowska",
+        "dateAdded": "2016/11/29",
+        "imageUrl": "roxanna.jpg"
     },
     {
-        "title": "A Dance with Dragons",
-        "author": "George R. R. Martin",
-        "genre": "fantasy",
-        "dateAdded": "18.04.2017",
-        "imageUrl": "ADanceWithDragons1.jpg"
+        "title": "Ryan",
+        "author": "Alicja Zmysłowska",
+        "dateAdded": "2017/04/18",
+        "imageUrl": "ryan.jpg"
+    }],
+    "articles": [{
+        "title": "Some Title Of An Article",
+        "author": "Admin",
+        "datePosted": "March 13, 2010",
+        "category": "Some Category",
+        "comments": "30",
+        "photo": "",
+        "text": "Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magna est bibendum arcu, sit amet tempor lacus mi nec felis. Vestibulum erat ante, laoreet et dignissim ac, blandit dictum elit. Cras auctor iaculis mi at blandit. Fusce id velit metus. Duis turpis ante, consequat a hendrerit nec, biben"
+    },
+    {
+        "title": "Happy Dogs",
+        "author": "Admin",
+        "datePosted": "March 13, 2010",
+        "category": "Dogs",
+        "comments": "30",
+        "photo": "happy.jpg",
+        "text": "Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magn"
+    },
+    {
+        "title": "Hunting Dogs",
+        "author": "Admin",
+        "datePosted": "April 13, 2010",
+        "category": "Hunting",
+        "comments": "28",
+        "photo": "greypassion.jpg",
+        "text": "Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magna est bibendum arcu, sit amet tempor lacus mi nec felis. Vestibulum erat ante, laoreet et dignissim ac, blandit dictum elit. Cras auctor iaculis mi at blandit. Fusce id velit metus. Duis turpis ante, consequat a hendrerit nec, biben"
+    },
+    {
+        "title": "The traveller",
+        "author": "Admin",
+        "datePosted": "January 21, 2010",
+        "category": "Hunting",
+        "comments": "30",
+        "photo": "observer.jpg",
+        "text": "Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magn"
+    },
+    {
+        "title": "Some Title Of An Article",
+        "author": "Admin",
+        "datePosted": "March 13, 2010",
+        "category": "Some Category",
+        "comments": "30",
+        "photo": "ryan2.jpg",
+        "text": "Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magn"
+    },
+    {
+        "title": "Beautiful Dog",
+        "author": "Admin",
+        "datePosted": "March 13, 2010",
+        "category": "Some Category",
+        "comments": "30",
+        "photo": "ryan.jpg",
+        "text": "Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magn"
+    },
+    {
+        "title": "Happy Dogs",
+        "author": "Admin",
+        "datePosted": "June 6, 2010",
+        "category": "Dogs",
+        "comments": "30",
+        "photo": "together.jpg",
+        "text": "Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magn"
     }]
 }

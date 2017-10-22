@@ -1,14 +1,20 @@
 const seed = require('../db/seed.json');
-const BooksData = require('./books.data');
+const PhotosData = require('./photos.data');
+const ThemesData = require('./themes.data');
 
 const init = async (db) => {
-    const collectionBooks = db.collection('books');
-    if (await collectionBooks.count() === 0) {
-        collectionBooks.insert(seed.books);
+    const collectionPhotos = db.collection('photos');
+    if (await collectionPhotos.count() === 0) {
+        collectionPhotos.insert(seed.photos);
+    }
+    const collectionThemes = db.collection('themes');
+    if (await collectionThemes.count() === 0) {
+        collectionThemes.insert(seed.articles);
     }
 
     return Promise.resolve({
-        books: new BooksData(db),
+        photos: new PhotosData(db),
+        themes: new ThemesData(db),
     });
 };
 

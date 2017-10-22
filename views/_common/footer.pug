@@ -1,4 +1,4 @@
-- var menuItems = { 'Home': '/', 'Books': '/books', 'Authors': '/authors', 'Genres': '/genres', 'Users': '/users', 'Contacts': '/contacts' }
+- var menuItems = { 'Home': '/', 'Themes': '/themes', 'Features': '/features', 'About': '/about', 'Blog': '/blog', 'Support': '/support', 'Affiliates': '/affiliates', 'Login': 'login', 'Join Today': '/join', 'FAQ': '/faq' }
 
 mixin nav-item(name, link)
   li.nav-item.menu
@@ -11,12 +11,12 @@ mixin nav-item(name, link)
   .article
     h4 Custom Text Widget
     ul
-      li Rhoncus quis, varius sed velit
+      li Rhoncus quis varius sed velit nibh moles
       li Mauris quis nunc eu nunc molestie
-      li Egestas et sit amet odio nibh
-      li Morbi lacinia velit in sodales
-      li Sed pharetra sem feugiat sit
-      li Vivamus ut cursus augue lorem
+      li Egestas et sit amet odio morbi quis nunc
+      li acinia velit in nibh sodales sed quis nunc
+      li Pharetra sem feugiat nibh sodales sed
+      li Vivamus ut cursus augue nibh sodales sed
   .article
     h4 Recent Posts
     p.text Rhoncus quis, varius sed velit. Mauris quis nunc eu nunc molestie egestas et sit amet odio. Morbi lacinia velit in nibh sodales sed pharetra sem feugiat. Vivamus ut cursus augue. Integer sit amet arcu lorem, at egestas tellus. Phasellus tellus orci, congue at tristique at, mattis ut arcu. Donec dictum eros eu felis laoreet egestas. Nullam adipiscing nibh id felis lacinia a iaculis nisi vestibulum. Ut sit amet urna enim, at accumsan quam. Nunc dui elit, hendrerit quis convallis sit amet, dapibus in metus. Ut dolor est, blandit a auctor vitae, accumsan id eros. Vivamus bibendum dolor eget lacus hendrerit et egestas risus tincidunt. Vivamus convallis magna sit amet orci vehicula suscipit. Quisque rhoncus lorem in ligula condimentum sollicitudin at a massa. Donec mattis, libero at euismod semper, magna est bibendum arcu, sit amet tempor lacus mi nec felis. Vestibulum erat ante, laoreet et dignissim ac, blandit dictum elit. Cras auctor iaculis mi at blandit. Fusce id velit metus. Duis turpis ante, consequat a hendrerit nec, biben
@@ -25,3 +25,9 @@ nav.navbar.navbar-dark.bg-dark.navbar-expand-lg.footer-menu
   ul.nav.navbar-nav.mr-auto
     each val, key in menuItems
       +nav-item(key, value)
+
+  navbar.navbar-right.credit
+    p Designed by &nbsp;
+    span Elegant WordPress Themes |&nbsp;
+    p Lovely photos by &nbsp;
+    span Alicja Zmysłowska

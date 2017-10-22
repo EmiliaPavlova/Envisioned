@@ -1,11 +1,10 @@
 const init = (app, data) => {
     const controller = {
         getHomeView(req, res) {
-            return data.books.getAll()
-                .then((book) => {
-                    console.log('books', book);
+            return data.photos.getAll()
+                .then((photo) => {
                     return res.render('home', {
-                        model: book,
+                        model: photo,
                     });
                 });
         },

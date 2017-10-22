@@ -1,38 +1,26 @@
-.carousel.slide(id="myCarousel" data-ride="carousel")
-    <!-- Wrapper for slides -->
-    .carousel-inner(role="listbox")
+.carousel.slide(id='myCarousel' data-ride='carousel')
+  <!-- Wrapper for slides -->
+  .carousel-inner(role='listbox')
+    each photo, index in model
+      if index == 0
         .item.active
-            img(src="../../public/assets/images/book.jpg" alt="pic 1")
-            .carousel-caption.d-none.d-md-block
-                h3 Title
+          img(src=`../public/assets/images/${photo.imageUrl}` alt=`${photo.title}`)
+          .carousel-caption.d-none.d-md-block
+            h3 #{photo.title}
+      else
         .item
-            img(src="../../public/assets/images/book.jpg" alt="pic 2")
-            .carousel-caption.d-none.d-md-block
-                h3 Title
-        .item
-            img(src="../../public/assets/images/book.jpg" alt="pic 3")
-            .carousel-caption.d-none.d-md-block
-                h3 Title
-        .item
-            img(src="../../public/assets/images/book.jpg" alt="pic 4")
-            .carousel-caption.d-none.d-md-block
-                h3 Title
+          img(src=`../public/assets/images/${photo.imageUrl}` alt=`${photo.title}`)
+          .carousel-caption.d-none.d-md-block
+            h3 #{photo.title}
 
-    <!-- Left and right controls -->
-    a.left.carousel-control(href="#myCarousel" role="button" data-slide="prev")
-        span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
-        span.sr-only Previous
-    a.right.carousel-control(href="#myCarousel" role="button" data-slide="next")
-        span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
-        span.sr-only Next
+  <!-- Left and right controls -->
+  a.left.carousel-control(href='#myCarousel' role='button' data-slide='prev')
+    span.sr-only Previous
+  a.right.carousel-control(href='#myCarousel' role='button' data-slide='next')
+    span.sr-only Next
 
-    <!-- Indicators -->
+  <!-- Indicators -->
 .carousel-indicators
+  each photo, index in model
     .background-image
-        img(data-target="#myCarousel" data-slide-to="0" src="../../public/assets/images/book.jpg" alt="pic 1")
-    .background-image
-        img(data-target="#myCarousel" data-slide-to="1" src="../../public/assets/images/book.jpg" alt="pic 2")
-    .background-image
-        img(data-target="#myCarousel" data-slide-to="2" src="../../public/assets/images/book.jpg" alt="pic 3")
-    .background-image
-        img(data-target="#myCarousel" data-slide-to="3" src="../../public/assets/images/book.jpg" alt="pic 4")
+        img.img-responsive(data-target='#myCarousel' data-slide-to=index src=`../public/assets/images/${photo.imageUrl}` alt=`${photo.title}`)

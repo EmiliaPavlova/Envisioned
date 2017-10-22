@@ -1,4 +1,4 @@
-class Book {
+class Theme {
     static isValid(model) {
         return typeof model !== 'undefined';
     }
@@ -8,7 +8,7 @@ class Book {
     }
 
     static toViewModel(model) {
-        const viewModel = new Book();
+        const viewModel = new Theme();
 
         Object.keys(model)
             .forEach((prop) => {
@@ -19,4 +19,4 @@ class Book {
     }
 }
 
-module.exports = Book;
+module.exports = Theme;

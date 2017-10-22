@@ -10,7 +10,9 @@ class BaseData {
     }
 
     getAll() {
-        return this.collection.find()
+        return this.collection
+        .find()
+        .sort( { 'dateAdded': 1 } )
         .toArray()
         .then((models) => {
             if (this.ModelClass.toViewModel) {

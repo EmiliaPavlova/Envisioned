@@ -1,7 +1,8 @@
 module.exports = (app, data) => {
     const home = require('./home')(app, data);
-    const books = require('./books')(app, data);
+    const themes = require('./themes')(app, data);
 
     app.use('/', home);
-    app.use('/', books);
+    app.use('/', themes);
+    app.use('/:id', themes);
 };
